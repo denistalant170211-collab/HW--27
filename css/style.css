@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 100vh;
+    background-color: #686868;
+    transition: width 0.3s ease;
+    overflow: hidden;
+}
+
+.menu:hover {
+    width: 200px;
+}
+
+.menu-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    white-space: nowrap;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #fff;
+    transition: opacity 0.2s;
+}
+
+.menu:hover .menu-label {
+    opacity: 0;
+}
+
+.menu-nav {
+    padding-top: 40px;
+    padding-left: 20px;
+    opacity: 0;
+    transition: opacity 0.2s 0.1s;
+}
+
+.menu:hover .menu-nav {
+    opacity: 1;
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s;
+}
+
+.menu-link:hover {
+    color: #e4ac2b;
+}
+
+.menu-link::before {
+    content: "◆";
+    color: #e4ac2b;
+    font-size: 12px;
+    flex-shrink: 0;
+}
